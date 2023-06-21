@@ -1,11 +1,13 @@
-import { Form } from "./components/From";
-
-export default function App() {
-  return(
-    <div className="max-w-7xl mx-auto py-4 px-8">
-    <div className="max-w-3-xl">
-      <Form />
+function App() {
+  return (
+    <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
+      <p className="text-3xl text-gray-700 font-bold mb-5">
+        Welcome!
+      </p>
+      <p className="text-gray-500 text-lg">
+        React and Tailwind CSS in action
+      </p>
     </div>
-    </div>
-  )
+  );
 }
+export default App;
