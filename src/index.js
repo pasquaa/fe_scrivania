@@ -3,11 +3,39 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Registrazione } from './components/pRegistrazione';
+import { Dimenticata } from './components/passDimenticata';
+
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+{/*Per collegamenti*/}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "pRegistrazione",
+    element: <Registrazione />,
+  },
+  {
+    path: "passDimenticata",
+    element: <Dimenticata />,
+  }
+]);
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
